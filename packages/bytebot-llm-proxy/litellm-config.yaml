@@ -28,3 +28,20 @@ model_list:
     litellm_params:
       model: gemini/gemini-2.5-flash
       api_key: os.environ/GEMINI_API_KEY
+
+  # Cerebras Models with key rotation
+  - model_name: cerebras-llama3-70b
+    litellm_params:
+      model: cerebras/llama3.1-70b
+      api_base: https://api.cerebras.ai/v1
+      api_key:
+        - os.environ/CEREBRAS_KEY_1
+        - os.environ/CEREBRAS_KEY_2
+        - os.environ/CEREBRAS_KEY_3
+        - os.environ/CEREBRAS_KEY_4
+        - os.environ/CEREBRAS_KEY_5
+        - os.environ/CEREBRAS_KEY_6
+        - os.environ/CEREBRAS_KEY_7
+        - os.environ/CEREBRAS_KEY_8
+        - os.environ/CEREBRAS_KEY_9
+        - os.environ/CEREBRAS_KEY_10
